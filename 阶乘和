@@ -1,0 +1,14 @@
+#include<stdio.h>
+int main()
+{
+	int sum1= 1,sum=0,x,j=1;
+	printf("输入阶乘最大数=>");
+	scanf("%d",&x);
+	while(x--)
+	{
+			sum1 *= j++;             //每项阶乘
+		sum += sum1;                 //前面阶乘和
+	}
+	printf("%d",sum);
+	return 0;
+}
