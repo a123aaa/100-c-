@@ -1,0 +1,17 @@
+#include<math.h>
+static int i = 0;
+void F1(char *a)
+{
+	if (a[i++])
+		F1(a);
+	if(i>0)
+	putchar(a[--i]);
+}
+int main()
+{
+	char a[30]="0";
+	printf("请输入字符串=>\n");
+	gets(a);
+	J1(a);
+	return 0;
+}
