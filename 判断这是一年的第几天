@@ -16,5 +16,5 @@ int main()
             number += c;
     }
     printf("这是第%d天\n",number);
-    return 0；
+    return 0;
 }
