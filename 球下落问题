@@ -1,0 +1,16 @@
+#include<stdio.h>
+int main()
+{
+	float height=100, Long = 100;
+	int x;
+	printf("请输入次数=>");
+	scanf("%d",&x);
+	for (int i = 1; i <= x; i++)
+	{
+		height /= 2;                             //反弹高度
+	    if(i>1) 
+		Long += 4*height;                        //经过总路程
+	}
+	printf("共经历%lf米,反弹高度%lf米\n",Long,height);
+	return 0;
+}
