@@ -1,0 +1,21 @@
+#include<stdio.h>
+main()
+{
+    char a[30];
+    int number=0, zm=0, kg=0, qt=0;
+    printf("输入字符串=>");
+    gets(a);
+    for (int i = 0; a[i]; i++)
+    {
+        if (a[i]>='0'&&a[i]<='9')       //判断是否是数字
+        {
+            number++;
+        }
+        else if (isalnum(a[i]))  //判断是否是字母
+            zm++;
+        else if (a[i] == ' ')     //判断是否是空格
+            kg++;
+        else qt++;                //空格计数
+    }
+    printf("字母有%d个,数字有%d个,空格有%d个,其它有%d个\n",zm,number,kg,qt);
+}
