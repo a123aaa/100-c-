@@ -1,0 +1,15 @@
+#include<stdio.h>
+int F1(int x)
+{
+	if (x)
+		return x * F1(x - 1);
+	else return 1;
+}
+int main()
+{
+	int x;
+	printf("输入想求的阶乘=>");
+	scanf("%d",&x);
+	printf("%d", F1(x)); 
+	return 0;
+}
