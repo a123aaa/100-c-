@@ -1,0 +1,17 @@
+#include<stdio.h>
+int main()
+{
+  int i, j;
+  char a[5][22] = {"      **      **","  **      **      **","  **              **","     **        **","          **" };
+  char b[5][22] = {"    **  *    *  **"," **                **","   **            **","       **    **"," "};
+     for (i = 0; i < 5; i++)
+     {  
+           for(j=0;j<22;j++)
+               printf("%c", a[i][j]);
+               printf("\n");
+           for (j = 0; j < 22; j++)
+               printf("%c", b[i][j]);
+               printf("\n");
+     }
+     return 0;
+}
