@@ -1,5 +1,5 @@
 #include<stdio.h>
-void D()
+int main()
 {
     int i,k=0,j,a=31,b=30,c=29,number;
     printf("输入月份和日=>");
@@ -16,4 +16,5 @@ void D()
             number += c;
     }
     printf("这是第%d天\n",number);
+    return 0；
 }
