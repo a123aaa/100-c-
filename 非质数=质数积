@@ -1,0 +1,21 @@
+#include<stdio.h>
+int mian()
+{
+    int x;
+    printf("输入查询字符=>");
+    scanf("%d",&x);
+    printf("%d=",x);
+    for(int i=2;i<=x;)            //质数从2开始
+    {
+        if (x % i == 0)           //判断该质数是否是因数
+        {
+            x /= i;
+            printf("%d",i);
+            if (x!=1)
+             printf("*");
+        }
+        else i++;                  //不是质数，i再加加
+    }
+    printf("\n");
+    return 0；
+}
