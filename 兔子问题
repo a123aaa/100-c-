@@ -1,0 +1,15 @@
+#include<stdio.h>
+int main()
+{
+    int i,x,a=1,b=1;
+    printf("输入想查询的月份=>");
+    scanf_s("%d",&x);
+    for (i = 3; i <= x; i++)
+    {
+        int t=b;
+        b = a + b;                  //使后一位为前面两个相加
+        a = t;                      //使第一为后移一格
+    }
+    printf("%d  ", 2 * b);
+    return 0;
+}
