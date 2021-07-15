@@ -1,0 +1,12 @@
+#include<stdio.h>
+int main()
+{
+    int a, b, c;
+    int num1, num2, num3;
+    printf("输入a,b,c=>");
+    scanf_s("%d%d%d", &a, &b, &c);
+    num1 = a < b ? (a < c ? a : c) : (b < c ? b : c);      //取出最小值
+    num3 = a > b ? (a > c ? a : c) : (b > c ? b : c);         //取出最大值
+    num2 = num1 ^ num3 ^ a ^ b ^ c;                        //用异或^取出没取到的值
+    printf("%d<%d<%d\n",num1,num2,num3);
+}
