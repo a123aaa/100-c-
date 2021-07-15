@@ -1,5 +1,5 @@
 #include<stdio.h>
-void A1(int i, int j, int k)                    //对i,j,k三个数依次排序
+void sort(int i, int j, int k)                    //对i,j,k三个数依次排序
 {
     printf("%3d ", i * 100 + j * 10 + k);
     printf("%3d ", i * 100 + k * 10 + j);
@@ -8,13 +8,14 @@ void A1(int i, int j, int k)                    //对i,j,k三个数依次排序
     printf("%3d ", k * 100 + j * 10 + i);
     printf("%3d \n", k * 100 + i * 10 + j);
 }
-void A()
+int main()
 {
     int a, b, c, d;
     printf("输入不同的四个数=>");
     scanf("%d%d%d%d", &a, &b, &c, &d);
-    A1(a, b, c);
-    A1(a, b, d);
-    A1(a, c, d);
-    A1(b, c, d);
+    sort(a, b, c);
+    sort(a, b, d);
+    sort(a, c, d);
+    sort(b, c, d);
+    return 0;
 }
