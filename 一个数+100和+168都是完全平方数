@@ -1,0 +1,17 @@
+#include<stdio.h>
+#include<math.h>
+int C1(int x)               //判断是否是完全平方数
+{
+    int  i = sqrt(x);
+    if (pow(i, 2) == x)     //开根号后再平方是同一个数(用int型判断)
+        return 1;
+    else
+        return 0;
+}
+void C()
+{
+    int i;
+    for (i = 1;; i++)
+        if (C1(i + 100) && C1(i + 168))
+            printf("%d\n", i);
+}
