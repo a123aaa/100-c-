@@ -1,0 +1,27 @@
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+	int i, k;
+	for(i=2;i<1000;i++)                                   //范围1~1000
+	{
+		int flog = 0, sum = 0, t = 0, a[50] = {0};                 // flog为1表示有因子,备份数字i
+		for (int j = sqrt(i); j >=1; j--)                 //j为因子
+			if (i % j == 0)
+			{
+				k = i / j;                                 //求另一个因子				
+					a[t++] = j;                            //把因子放入数组中
+					if (k != i && j != k)                  //避免相同因子，避免因子是他本身
+						a[t++] = k;                        //把因子放入数组中
+					flog = 1;
+			} 
+	    if (flog)
+	    {   
+		    for (int i = 0; i < t; i++)                   //求所以因子和
+		        sum += a[i]; 
+		    if (sum == i)                              //判断所以因子和是否为它自己
+                printf("%d   ",i);
+	    }
+	}	
+	return 0;
+}
