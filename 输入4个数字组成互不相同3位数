@@ -1,3 +1,4 @@
+#include<stdio.h>
 void A1(int i, int j, int k)                    //对i,j,k三个数依次排序
 {
     printf("%3d ", i * 100 + j * 10 + k);
