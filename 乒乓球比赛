@@ -1,0 +1,9 @@
+#include<stdio.h>
+{
+	char x, y, z;
+	for(x='a';x<'d';x++)
+		for(y='a';y<'d';y++)
+			for(z='a';z<'d';z++)
+				if(x!='a' && 'c' != x && 'c' != z&&x!=y&&y!=z&&x!=z)
+	             printf("x对手是%c,y对手是%c,z对手是%c\n",x,y,z);
+}
