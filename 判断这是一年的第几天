@@ -1,0 +1,19 @@
+#include<stdio.h>
+void D()
+{
+    int i,k=0,j,a=31,b=30,c=29,number;
+    printf("输入月份和日=>");
+    scanf_s("%d%d",&i,&j);
+    number = j;                              
+    printf("一年按365天算,");
+    for (k = 2; k <= i; k++)                        //一月份直接输出
+    {
+        if (k == 5 || k == 7 || k == 8 || k == 10 || k == 12)     //每个月都累加上个月的天数
+            number += b;
+        if (k==2||k == 4 || k == 6 || k == 9 || k == 11)
+            number += a;
+        if (k == 3)
+            number += c;
+    }
+    printf("这是第%d天\n",number);
+}
