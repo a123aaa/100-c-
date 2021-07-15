@@ -1,0 +1,32 @@
+#include<stdio.h>
+void F1(int m, int n)
+{
+    int t = m <= n ? m : n;        //找到最小数
+    for (t; t > 0; t--)
+        if (m % t + n % t == 0)
+        {
+            printf("最大公约数是%d\n", t);
+            break;
+        }
+}
+void F2(int m, int n)
+{
+    int t = m <= n ? n : m;       //找到最大数
+    int h = m ^ t ^ n;            //找到最小数
+    for (int i = 1;; i++)
+        if (t * i % h == 0)
+        {
+            printf("最小公倍数是%d\n",t*i);
+            break;
+        }
+
+}
+int mian()
+{
+    int m, n;
+    printf("输入m:n=>");
+    scanf_s("%d%d",&n,&m);
+    F1(n,m);                   //求最大公约数
+    F2(n,m);                   //求最小公倍数
+    return 0;
+}
