@@ -1,0 +1,17 @@
+#include<stdio.h>
+int main()
+{
+	int a[] = { 1,2,3,4,5,6,7,8,9,10 };
+	int left = 0, right = sizeof(a)/sizeof(a[0])-1;
+	while (left < right)
+	{
+		while (a[left++] % 2 == 0);  left--;       //找到最左面的奇数下标
+		while (a[right--] % 2 == 1); right++;      //找到最右面的奇数下标
+			int t = a[left];                         //交换数值
+			a[left++] = a[right];
+			a[right--] = t;
+	}
+	for (int i = 0; i < sizeof(a) / sizeof(a[0]); i++)
+		printf("%d ",a[i]);
+	return 0;
+}
