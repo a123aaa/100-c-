@@ -1,0 +1,48 @@
+#include<stdio.h>                //方法一
+int main()
+{
+	int a[4];
+	int i = 0;
+	char c;
+	while (1)
+	{
+		a[0] = a[1] = a[2] = a[3] = 1;
+	    a[i++] = 0;                //假设凶手
+		if (a[0] == 0)   c = 'A';
+		if (a[1] == 0)   c = 'B';
+		if (a[2] == 0)   c = 'C';
+		if (a[3] == 0)   c = 'D';
+		if (a[0] == 0 && a[2] == 0 && a[3] == 0 && a[3] != 0)     //a[0]说假话
+		{
+			printf("凶手是%c\n",c);
+			break;
+		}
+		if (a[0] != 0 && a[2] != 0 && a[3] == 0 && a[3] != 0)     //a[1]说假话
+		{
+			printf("凶手是%c\n", c);
+			break;
+		}
+		if (a[0]!= 0 && a[2] == 0 && a[3] != 0 && a[3] != 0)     //a[2]说假话
+		{
+			printf("凶手是%c\n", c);
+			break;
+		}
+		if (a[0] != 0 && a[2] == 0 && a[3] == 0 && a[3] == 0)     //a[3]说假话
+		{
+			printf("凶手是%c\n", c);
+			break;
+		}
+	}      
+	return 0;
+}
+
+
+#include<stdio.h>            //方法二
+int main()
+{
+	char killer;
+	for (killer = 'A'; killer <= 'D'; killer++)
+		if ((killer != 'A') + (killer == 'C') + (killer == 'D') + (killer != 'D') == 3)
+			printf("凶手是%c\n", killer);
+	return 0;
+}
